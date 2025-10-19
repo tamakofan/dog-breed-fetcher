@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) throws BreedFetcher.BreedNotFoundException {
         String breed = "hound";
-        BreedFetcher breedFetcher = new CachingBreedFetcher(new BreedFetcherForLocalTesting());
+        BreedFetcher breedFetcher = new BreedFetcherForLocalTesting();
         int result = getNumberOfSubBreeds(breed, breedFetcher);
         System.out.println(breed + " has " + result + " sub breeds");
 
