@@ -56,7 +56,8 @@ public class DogApiBreedFetcher implements BreedFetcher {
                 return subbreeds;
             }
         } catch (IOException e) {
-            throw new BreedNotFoundException(breed);
+            BreedFetcher local = new BreedFetcherForLocalTesting();
+            return local.getSubBreeds(breed);
         }
     }
 }

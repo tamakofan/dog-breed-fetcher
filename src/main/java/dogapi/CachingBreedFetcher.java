@@ -40,7 +40,6 @@ public class CachingBreedFetcher implements BreedFetcher {
         catch (BreedNotFoundException e) {
             callsMade++;
             throw e;
-
         }
     }
 
