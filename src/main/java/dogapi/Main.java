@@ -30,17 +30,10 @@ public class Main {
         boolean success = false;
 
         try {
-            breedFetcher.getSubBreeds(breed);
-            success = true;
-        } catch (BreedFetcher.BreedNotFoundException e) {
-        }
-
-        if (!success) {
-            return 0;
-        }
-        else {
             List<String> subbreeds = breedFetcher.getSubBreeds(breed);
             return subbreeds.size();
+        } catch (BreedFetcher.BreedNotFoundException e) {
+            return 0;
         }
     }
 }
